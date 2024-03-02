@@ -1,0 +1,12 @@
+name: PrintName
+on: push 
+
+jobs:
+  print-name:
+    runs-on: ubuntu-latest # 指定在何种环境中运行这个 job
+    steps:
+      - name: Print a name
+        env: 
+          name: "zhangsan" 
+        run: | 
+          echo $name 
